@@ -1,3 +1,18 @@
 @import 'reset.css';
 @import 'layout.css';
 @import 'responsive.css';
+
+@font-face {
+    font-family: "Golos-medium";
+    src: url("../fonts/Golos_Text_Medium.ttf");
+}
+
+@font-face {
+    font-family: "Fira-bold";
+    src: url("../fonts/Fira_Bold.otf");
+}
+
+@font-face {
+    font-family: "Fira-retina";
+    src: url("../fonts/Fira-retina.otf");
+}

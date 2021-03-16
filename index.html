@@ -1,14 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosmars Interactive WebPoster</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="display"></div>
+<div class="container">
+<div class="container-content">
+    <header>
+        <div class='logo'>
+            <img src="images/logo-desctop.svg" alt="logo">
+        </div>
+        <div class='datetime'>
+            <div>
+                <span class="notion">Дата</span>
+                <div class='black-display'>
+                    <span class="neon">16.03.2021</span>
+                </div>
+            </div>
+            <div>
+                <span class="notion">Время</span>
+                <div class='black-display'>
+                    <span class="neon">11:12:00:23</span>
+                </div>
+            </div>
+        </div>
+        <div class="asteroid">
+            <div class='asteroid-counter'>
+                <span class="notion">Кол-во астероидов на область</span>
+                <div class='display'>
+                    <div class='black-display-container'>
+                        <div class="display-num"><span>1</span></div>
+                        <div class="display-num"><span>2</span></div>
+                        <div class="display-num"><span>3</span></div>
+                        <div class="display-num"><span>4</span></div>
+                        <div class="display-num"><span>5</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class='btn-barrier'>
+                <img src="images/btn-barrier.svg" alt="btn">
+            </div>
+        </div>
+        <div class='distance'>
+            <div class="distance-earth-counter">
+                <span class="notion">Расстояние до Земли (тыс км)</span>
+                <div class='display'>
+                    <div class='black-display-container'>
+                        <div class="display-num"><span>1</span></div>
+                        <div class="display-num"><span>2</span></div>
+                        <div class="display-num"><span>3</span></div>
+                        <div class="display-num"><span>4</span></div>
+                        <div class="display-num"><span>5</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="distance-mars-counter">
+                <span class="notion">Растояние до Марса (тыс км)</span>
+                <div class='display'>
+                    <div class='black-display-container'>
+                        <div class="display-num"><span>1</span></div>
+                        <div class="display-num"><span>2</span></div>
+                        <div class="display-num"><span>3</span></div>
+                        <div class="display-num"><span>4</span></div>
+                        <div class="display-num"><span>5</span></div>
+                        <div class="display-num"><span>6</span></div>
+                        <div class="display-num"><span>7</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                        <div class="display-num"><span>&#8194;</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='time-start'>
+            <span class="notion">Время с начала полёта</span>
+            <div class="display">
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> МЕСЯЦ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> ДНЕЙ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> ЧАСОВ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> МИНУТ</span>
+                </div>
+            </div>
+        </div>
+        <div class='time-finish'>
+            <span class="notion">Время с начала полёта</span>
+            <div class="display">
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> МЕСЯЦ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> ДНЕЙ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> ЧАСОВ</span>
+                </div>
+                <div class="time-unit">
+                    <div class="unit-num"><span>1</span></div>
+                    <div class="unit-num"><span>2</span></div>
+                    <span class="unit-name"> МИНУТ</span>
+                </div>
+            </div>
+        </div>
+        <div class='buttons'>
+            <div class='info-btn'></div>
+            <div class='sos-btn'></div>
+        </div>
+    </header>
+    <main>
+    </main>
+</div>
+
+</div>
 </body>
 </html>
