@@ -1,6 +1,8 @@
 @import 'reset.css';
+@import 'fancyknob.css';
 @import 'layout.css';
 @import 'responsive.css';
+
 
 @font-face {
     font-family: "Golos-medium";

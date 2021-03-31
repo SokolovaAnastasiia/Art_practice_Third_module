@@ -13,13 +13,13 @@ body {
     border: 1.5px solid rgba( 5, 12, 37, 1 );
     border-radius: 3px;
     background: linear-gradient( 270deg, 
-                rgba( 36,  67,  103, 0     )  -5.25%,
-                rgba( 179, 209, 243, 0.064 )  68.14%,
-                rgba( 33,  72,  118, 0     ) 102.51% );
-    box-shadow: inset  0   3px rgba( 122, 132, 144, 0.58   ),    /* top    */
-                inset  0  -3px rgba(  22,  26,  31, 0.46   ),    /* bottom */
-                inset  3px 0   rgba(  72,  78,  87, 0.51 ),      /* left   */
-                inset -3px 0   rgba(  72,  78,  87, 0.51 );      /* right  */
+                rgba( 36,  67,  103, 0     )  -5%,
+                rgba( 179, 209, 243, 0.1 )  68%,
+                rgba( 33,  72,  118, 0     ) 102% );
+    box-shadow: inset  0   3px rgba( 122, 132, 144, 0.5   ),    /* top    */
+                inset  0  -3px rgba(  22,  26,  31, 0.4   ),    /* bottom */
+                inset  3px 0   rgba(  72,  78,  87, 0.5 ),      /* left   */
+                inset -3px 0   rgba(  72,  78,  87, 0.5 );      /* right  */
 }
 
 .display::before {
@@ -30,7 +30,7 @@ body {
     left:   -4.5px;
     right:  -4.5px;
     background: linear-gradient( 180deg, 
-                rgba(  10,  19,  27, 0.39 ), 
+                rgba(  10,  19,  27, 0.4 ), 
                 rgba( 124, 178, 217, 0.05 ));
     border-radius: 3px;
     z-index: -1;
@@ -131,15 +131,39 @@ header > div {
     font-family: "Fira-bold";
     font-size: 0.8em;
     color: #ebebeb;
-    text-shadow:0 0 5px #ffffff47,
-                0 0 10px #ffffffb0,
-                0 0 20px #ffffff96,
-                0 0 40px #00ffffd4,
-                0 0 80px #0ff,
-                0 0 90px #0ff,
-                0 0 100px #0ff,
-                0 0 150px #00ffffc9;
+    text-shadow:0 0   5px  #ffffff47,
+                0 0  10px  #ffffffb0,
+                0 0  20px  #ffffff96,
+                0 0  40px  #00ffff66,
+                0 0  80px  #00ffff78,
+                0 0  90px  #00ffffb3,
+                0 0 100px  #0ff,
+                0 0 150px  #00ffff;
+    animation: neon-glow .08s ease-in-out infinite alternate;
 }
+
+@keyframes neon-glow{
+    from {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.92),
+        0 0 30px rgba(202,228,225,0.34),
+        0 0 12px rgba(30,132,242,0.52),
+        0 0 21px rgba(30,132,242,0.92),
+        0 0 34px rgba(30,132,242,0.78),
+        0 0 54px rgba(30,132,242,0.92);
+      }
+    to {
+        text-shadow:
+        0 0 6px rgba(202,228,225,0.98),
+        0 0 30px rgba(202,228,225,0.42),
+        0 0 12px rgba(30,132,242,0.58),
+        0 0 22px rgba(30,132,242,0.84),
+        0 0 38px rgba(30,132,242,0.88),
+        0 0 60px rgba(30,132,242,1);
+      }
+}
+
+
 
 .asteroid,
 .distance,
@@ -193,12 +217,12 @@ header > div {
     margin-top: 3%;
     font-size: 1em;
     color: #0ff;
-    text-shadow:0 0 5px #ffffff59,
-                0 0 10px #ffffff3b,
-                0 0 20px #ffffff57,
-                0 0 40px #0ff,
-                0 0 80px #0ff,
-                0 0 90px #0ff,
+    text-shadow:0 0   5px #ffffff59,
+                0 0  10px #ffffff3b,
+                0 0  20px #ffffff57,
+                0 0  40px #0ff,
+                0 0  80px #0ff,
+                0 0  90px #0ff,
                 0 0 100px #0ff,
                 0 0 150px #0ff;
 }
@@ -266,7 +290,7 @@ header > div {
     font-weight: bold;
     color: #E3E3E3;
     font-size: 0.8em;
-    text-shadow:0 0 5px #ffffff59,
+    text-shadow:0 0  5px #ffffff59,
                 0 0 10px #ffffff3b,
                 0 0 20px #ffffff57;
 }
@@ -315,7 +339,236 @@ header > div {
 main {
     width: 100%;
     height: 86%;
-    border: pink 1px solid;
     display: flex;
 }
 
+.left-panel {
+    flex-basis: 44%;
+    background-image: url('../images/left-panel-shape.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5%;
+}
+
+.left-panel-note.notion {  
+    margin-bottom: 0;
+    margin-top: 9%;
+    margin-left: 2%;
+}
+
+.manage-mode {
+    height: 9%;
+    width: 44%;
+    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.manage-mode .notion {
+    margin: 0 0 1%;
+}
+
+.toggle {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.toggle span {
+    display: block;
+}
+
+.toggle-btn {
+    height: 100%;
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 2%;
+    position: relative;
+    background-image: url('../images/toggle-base.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.toggle-detail {
+    position: absolute;
+    height: 146%;
+    width: 67%;
+    left: -6%;
+    background-image: url(../images/toggle-btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.space-characteristics {
+    width: 100%;
+    height: 92%;
+    padding: 3% 10%;
+    box-sizing: border-box;
+}
+
+.space-state {
+    display: block;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.space-state > .notion {
+    margin: auto 5% auto 0;
+}
+
+.state {
+    padding-left: 4%;
+    padding-right: 4%;;
+    border: #465259 2px solid;
+    color: #465259;
+    margin-right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.state .notion {
+    margin-bottom: 0;
+}
+
+.chosen-state {
+    border: #56CCF2 2px solid;
+}
+
+.chosen-state .notion {
+    color: #56CCF2;
+}
+
+.parameters {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.param {
+    flex-grow: 1;
+    margin-bottom: 3%;
+    box-shadow: inset 0 3px rgba(26, 30, 36, 0.5), /* top */ inset 0 -3px rgba( 22, 26, 31, 0.4 ), /* bottom */ inset 3px 0 rgba(52, 56, 65, 0.5), /* left */ inset -3px 0 rgba(52, 56, 65, 0.5);
+    display: flex;
+    flex-basis: 25%;
+
+}
+.change-param {
+    border-right:#17171a 3px solid;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-param .notion {
+    margin-bottom: 0;
+    display: block;
+}
+
+.visualization-param {
+    flex-basis: 60%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.knob-surround {
+    width: 5.6em;
+    height: 5.6em;
+    border: solid 0.20em #1c2c2f;
+}
+
+.knob {
+    background-color: #33393F;
+}
+
+.knob:before {
+    background-color: #56CCF2;
+    -webkit-box-shadow: 0 0 0.4em 0 #00e1ff86;
+    -moz-box-shadow: 0 0 0.4em 0 #00e1ff8f;
+    box-shadow: 0 0 0.4em 0 #00e1ff83;
+}
+
+.knoblabel, .knobvalue {
+    display: none;
+}
+
+.tick:after {
+    width: .1em;
+    height: .4em;
+    background-color: #465259;
+}
+
+.activetick:after {
+    background-color: #00e1ff;
+    -webkit-box-shadow: 0 0 0.2em 0em rgb(0, 255, 221);
+    box-shadow: 0 0 0.15em 0.04em #090;
+}
+
+.right-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.energy {
+    flex-basis: 35%;
+    display: flex;
+}
+
+.charge {
+    flex-basis: 33%;
+}
+
+.charge > .notion {
+    margin: 2% 3% 3%;
+}
+
+.charge-panel {
+    height: 90%;
+    width: 100%;
+}
+
+.fuel {
+    flex-grow: 1;
+}
+
+.fuel > .notion {
+    margin: 1% 3% 3%;
+}
+
+/* CAMS */
+.cams {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-cam {
+    flex-basis: 67%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.another-cams {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cam {
+    flex-basis: 23%;
+}

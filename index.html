@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div class="container">
@@ -144,9 +146,100 @@
         </div>
     </header>
     <main>
+        <div class="left-panel">
+            <div class="left-panel-note notion">ПАНЕЛЬ РЕГУЛИРОВАНИЯ</div>
+            <div class="manage-mode">
+                <span class="notion">РЕЖИМ УПРАВЛЕНИЯ</span>
+                <span class="toggle">
+                    <span class="notion">Ручной</span>
+                    <div class='toggle-btn'>
+                        <div class="toggle-detail"></div>
+                    </div>
+                    <span class="notion">Авто</span>
+                </span>
+            </div>
+            <div class="space-characteristics">
+                <div class="space-state">
+                    <span class='notion'>СОСТОЯНИЕ КОРАБЛЯ</span>
+                    <div class="state">
+                        <span class='notion'>ШТАТНОЕ</span>
+                    </div>
+                    <div class="state chosen-state">
+                        <span class='notion'>АВАРИЙНОЕ</span>
+                    </div>
+                </div>
+                <div class="parameters">
+                    <div class="param">
+                        <div class="change-param">
+                            <div class="wrapper">
+                                <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
+                              </div>
+                            <span class="notion">СКОРОСТЬ</span>
+                        </div>
+                        <div class="visualization-param"></div>
+                    </div>
+                    <div class="param">
+                        <div class="change-param">
+                            <div class="wrapper">
+                                <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
+                              </div>
+                            <span class="notion">ТОПЛИВО</span>
+                        </div>
+                        <div class="visualization-param"></div>
+                    </div>
+                    <div class="param">
+                        <div class="change-param">
+                            <div class="wrapper">
+                                <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
+                              </div>
+                            <span class="notion">КИСЛОРОД</span>
+                        </div>
+                        <div class="visualization-param"></div>
+                    </div>
+                    <div class="param">
+                        <div class="change-param">
+                            <div class="wrapper">
+                                <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
+                              </div>
+                            <span class="notion">ДАВЛЕНИЕ</span>
+                        </div>
+                        <div class="visualization-param"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="energy">
+                <div class="charge">
+                    <span class="notion">УРОВЕНЬ ЭЛЕКТРОЗАРЯДА</span>
+                    <div class="charge-panel display"></div>
+                </div>
+                <div class="fuel">
+                    <span class="notion">ГРАФИК РАСХОДА ТОПЛИВА И ВЫРАБОТКИ ЭНЕРГИИ</span>
+                </div>
+            </div>
+            <div class="cams">
+                <div class="main-cam display"></div>
+                <div class="another-cams">
+                    <div class="cam display"></div>
+                    <div class="cam display"></div>
+                    <div class="cam display"></div>
+                    <div class="cam display"></div>
+                </div>
+            </div>
+        </div>
     </main>
 </div>
-
 </div>
+
+<script src="js/fancyknob.js"></script>
+<script>
+$('.inp').fancyknob();
+
+$("#test").on('input change',function(){
+  $('#ctrl').val($(this).val()).trigger('change')
+})
+</script>
+
 </body>
 </html>
