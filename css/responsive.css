@@ -8,3 +8,14 @@
         height: 60px;
     }
   }
+
+  @media (max-width: 500px) {
+    .bar {
+        width: 80px;
+        height: 80px;
+    }
+    .barOverflow {
+        width: 80px;
+        height: 40px;
+    }
+  }

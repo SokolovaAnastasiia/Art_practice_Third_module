@@ -522,7 +522,7 @@ main {
     width: 180px; height: 180px; /* full circle! */
     border-radius: 50%;
     box-sizing: border-box;
-    border: 18px solid #22262E;     /* half gray, */
+    border: 18px solid #2f343e;     /* half gray, */
     border-bottom-color: #336793;  /* half azure */
     border-right-color: #336793;
     box-shadow: inset 4px 4px 4px rgb(6 7 9 / 16%);
@@ -863,15 +863,15 @@ main {
 .info span {
     margin-top: 4%;
     margin-left: 4%;
-    margin-bottom: 0;
+    margin-bottom: 4%;
 }
 
 .barier {
     display: none;
-    top: 3%;
-    left: 3%;
-    right: 3%;
-    bottom: 3%;
+    top: 1%;
+    left: 1%;
+    right: 1%;
+    bottom: 1%;
     z-index: 100;
     position: fixed;
     overflow: hidden;
