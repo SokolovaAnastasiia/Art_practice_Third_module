@@ -2,9 +2,11 @@ body {
     background: linear-gradient( 180deg,
                 #27282C   0%, 
                 #26272B 100% );
-    border: 1px dotted lavender;
     font-size: 1vw;
+    
 }
+
+body::-webkit-scrollbar { width: 0; }
 
 /*DISPLAY*/
 
@@ -191,7 +193,7 @@ header > div {
 
 .btn-barrier img{
     float: right;
-    height: 90%;
+    height: 77%;
 }
 
 .black-display-container {
@@ -402,8 +404,12 @@ main {
     background-image: url(../images/toggle-btn.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    transition: left 1s;
 }
 
+.chosen {
+    left: 35%;
+}
 
 .space-characteristics {
     width: 100%;
@@ -478,19 +484,26 @@ main {
 
 .visualization-param {
     flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .progress{
     position: relative;
-    margin: 4px;
-    float:left;
     text-align: center;
+}
+
+.progress img {
+    position: absolute;
+    top: 42%;
+    left: 42%;
 }
 
 .barOverflow{ /* Wraps the rotating .bar */
   position: relative;
   width: 180px; height: 90px; /* Half circle (overflow) */
-  margin-bottom: -14px; /* bring the numbers up */
+  margin-bottom: -8%; /* bring the numbers up */
   overflow: hidden;
 }
 .bar{
@@ -499,9 +512,22 @@ main {
     width: 180px; height: 180px; /* full circle! */
     border-radius: 50%;
     box-sizing: border-box;
-    border: 10px solid #ccc;     /* half gray, */
-    border-bottom-color: #0bf;  /* half azure */
-    border-right-color: #0bf;
+    border: 18px solid #22262E;     /* half gray, */
+    border-bottom-color: #336793;  /* half azure */
+    border-right-color: #336793;
+    box-shadow: inset 4px 4px 4px rgb(6 7 9 / 16%);
+}
+
+.progress .black-display {
+    width: 40%;
+    height: 20%;
+    margin: 0 auto;
+}
+
+.progress .neon {
+    font-size: 1.1em;
+    text-shadow: 0 0 5px #ffffff00, 0 0 10px #ffffff40, 0 0 20px #ffffff96, 0 0 40px #00ffff66, 0 0 80px #00ffff78, 0 0 90px #00ffff00, 0 0 100px #0ff0, 0 0 150px #00ffff00;;
+    animation: none;
 }
 
 .wrapper {
@@ -663,12 +689,12 @@ main {
 .flask-fuel-level {
     background-color: #67B9E8;
     width: 100%;
-    height: 50%;
+    height: 100%;
     position: absolute;
     bottom: 0px;
-    border-bottom-left-radius: 250px;
-    border-bottom-right-radius: 250px;
+    border-radius: 250px;
     overflow: hidden;
+    transition: height 4s;
 }
 
 .flask-fuel-level::after {
@@ -732,15 +758,40 @@ main {
 }
 
 .main-cam {
-    flex-basis: 67%;
+    flex-basis: 75%;
     margin-top: 1%;
     margin-bottom: 1%;
+    background-position: center;
+    background-size: cover;
 }
 
 .another-cams {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
+    background-repeat: no-repeat;
+    
+}
+
+.cam {
+    background-position: center;
+    background-size: cover;
+}
+
+.another-cams div:nth-child(1) {
+    background-image: url(../images/cam1.png);
+}
+
+.another-cams div:nth-child(2) {
+    background-image: url(../images/cam2.png);
+}
+
+.another-cams div:nth-child(3) {
+    background-image: url(../images/cam3.png);
+}
+
+.another-cams div:nth-child(4) {
+    background-image: url(../images/cam4.png);
 }
 
 .cam {
@@ -748,7 +799,7 @@ main {
 }
 
 .cam::after, .main-cam::after {
-    content: "КАМЕРА 1";
+    content: "КАМЕРА";
     font-family: "Golos-medium";
     font-size: 0.9em;
     color: #909090;
@@ -762,3 +813,25 @@ main {
     left: 1%;
 }
 
+.red-light {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.342);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    animation: blink-animation 0.5s steps(5, start) infinite;
+    display: none;
+}
+
+.light-on {
+    display: block;
+}
+
+@keyframes blink-animation {
+    to {
+      opacity: 1;
+    }
+  }

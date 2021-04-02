@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<div class="red-light light-on"></div>
 <div class="container">
 <div class="container-content">
     <header>
@@ -22,13 +23,13 @@
             <div>
                 <span class="notion">Дата</span>
                 <div class='black-display'>
-                    <span class="neon">16.03.2021</span>
+                    <span class="neon">02.04.2021</span>
                 </div>
             </div>
             <div>
                 <span class="notion">Время</span>
                 <div class='black-display'>
-                    <span class="neon">11:12:00:23</span>
+                    <span id='time' class="neon"></span>
                 </div>
             </div>
         </div>
@@ -181,7 +182,8 @@
                                 <div class="barOverflow">
                                   <div class="bar"></div>
                                 </div>
-                                <span>10</span>%
+                                <img src="images/warning.svg" alt="">
+                                <div class="black-display neon"><span>10</span>%</div>
                               </div>
                         </div>
                     </div>
@@ -197,7 +199,8 @@
                                 <div class="barOverflow">
                                   <div class="bar"></div>
                                 </div>
-                                <span>10</span>%
+                                <img src="images/warning.svg" alt="">
+                                <div class="black-display neon"><span>10</span>%</div>
                               </div>
                         </div>
                     </div>
@@ -213,7 +216,8 @@
                                 <div class="barOverflow">
                                   <div class="bar"></div>
                                 </div>
-                                <span>10</span>%
+                                <img src="images/warning.svg" alt="">
+                                <div class="black-display neon"><span>10</span>%</div>
                               </div>
                         </div>
                     </div>
@@ -229,7 +233,8 @@
                                 <div class="barOverflow">
                                   <div class="bar"></div>
                                 </div>
-                                <span>10</span>%
+                                <img src="images/warning.svg" alt="">
+                                <div class="black-display neon"><span>10</span>%</div>
                               </div>
                         </div>
                     </div>
@@ -244,7 +249,7 @@
                         <div class="charge-grades">
                             <div class="charge-grade">
                                 <span class="notion">ВЫСОКИЙ</span>
-                                <div class="grades">
+                                <div class="grades high">
                                     <div class="grade"></div>
                                     <div class="grade"></div>
                                     <div class="grade"></div>
@@ -254,7 +259,7 @@
                             </div>
                             <div class="charge-grade">
                                 <span class="notion">КОМФОРТ</span>
-                                <div class="grades">
+                                <div class="grades comfort">
                                     <div class="grade"></div>
                                     <div class="grade"></div>
                                     <div class="grade"></div>
@@ -263,7 +268,7 @@
                             </div>
                             <div class="charge-grade">
                                 <span class="notion">СРЕДНИЙ</span>
-                                <div class="grades">
+                                <div class="grades middle">
                                     <div class="grade"></div>
                                     <div class="grade"></div>
                                     <div class="grade"></div>
@@ -272,7 +277,7 @@
                             </div>
                             <div class="charge-grade">
                                 <span class="notion">НИЗКИЙ</span>
-                                <div class="grades">
+                                <div class="grades low">
                                     <div class="grade"></div>
                                     <div class="grade"></div>
                                     <div class="grade"></div>
@@ -281,9 +286,9 @@
                             </div>
                         </div>
                         <div class="charge-percent">
+                            <div class="charge-percent-value neon">1</div>
                             <div class="charge-percent-value neon">0</div>
-                            <div class="charge-percent-value neon">1</div>
-                            <div class="charge-percent-value neon">1</div>
+                            <div class="charge-percent-value neon">0</div>
                             <div class="charge-percent-value neon">%</div>
                         </div>
                     </div>
