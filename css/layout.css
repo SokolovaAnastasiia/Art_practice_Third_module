@@ -196,6 +196,12 @@ header > div {
     height: 77%;
 }
 
+.btn-barrier img:hover{
+    border: 1px solid #0ff;
+    border-radius: 1%;
+    cursor: pointer;
+}
+
 .black-display-container {
     height: 65%;
     width: 95%;
@@ -326,9 +332,11 @@ header > div {
 
 .info-btn {
     background-image: url(../images/btn-info-desktop.svg);
+    cursor: pointer;
 }
 
 .sos-btn {
+    cursor: pointer;
     background-image: url(../images/btn-sos-desktop.svg);
 }
 
@@ -394,6 +402,7 @@ main {
     background-image: url('../images/toggle-base.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 
 .toggle-detail {
@@ -498,6 +507,7 @@ main {
     position: absolute;
     top: 42%;
     left: 42%;
+    width: 16%;
 }
 
 .barOverflow{ /* Wraps the rotating .bar */
@@ -543,6 +553,7 @@ main {
 
 .knob {
     background-color: #33393F;
+    cursor: pointer;
 }
 
 .knob:before {
@@ -776,6 +787,7 @@ main {
 .cam {
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 .another-cams div:nth-child(1) {
@@ -814,7 +826,8 @@ main {
 }
 
 .red-light {
-    position: absolute;
+    position: fixed;
+    overflow-y: hidden;
     background-color: rgba(255, 0, 0, 0.342);
     top: 0;
     left: 0;
@@ -822,12 +835,12 @@ main {
     bottom: 0;
     z-index: 100;
     opacity: 0;
-    animation: blink-animation 0.5s steps(5, start) infinite;
+    animation: blink-animation 0.3s steps(5, start) infinite;
     display: none;
 }
 
 .light-on {
-    display: block;
+    display: block !important;
 }
 
 @keyframes blink-animation {
@@ -835,3 +848,32 @@ main {
       opacity: 1;
     }
   }
+
+.info {
+    position: absolute;
+    top: 3%;
+    left: 72%;
+    right: 8%;
+    bottom: 90%;
+    z-index: 100;
+    background-color: #27282C;
+    display: none;
+}
+
+.info span {
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 0;
+}
+
+.barier {
+    display: none;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    bottom: 3%;
+    z-index: 100;
+    position: fixed;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 81px 17px  rgb(0, 195, 255), 0px 0px 20px 4px rgb(0, 195, 255);
+}

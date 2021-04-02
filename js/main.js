@@ -163,4 +163,17 @@ $('.red-light').click(function(){
   $('.red-light').toggleClass('light-on');
 })
 
+$('.info-btn').click(function(){
+  $('.info').toggleClass('light-on');
+})
+
+$('.btn-barrier').click(function(){
+  $('.barier').toggleClass('light-on');
+})
+
+$('.barier').click(function(){
+  $('.barier').toggleClass('light-on');
+})
+
+
 });
