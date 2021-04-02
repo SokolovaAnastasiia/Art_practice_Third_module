@@ -169,41 +169,69 @@
                     </div>
                 </div>
                 <div class="parameters">
-                    <div class="param">
+                    <div class="param speed">
                         <div class="change-param">
                             <div class="wrapper">
                                 <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
                               </div>
                             <span class="notion">СКОРОСТЬ</span>
                         </div>
-                        <div class="visualization-param"></div>
+                        <div class="visualization-param">
+                            <div class="progress">
+                                <div class="barOverflow">
+                                  <div class="bar"></div>
+                                </div>
+                                <span>10</span>%
+                              </div>
+                        </div>
                     </div>
-                    <div class="param">
+                    <div class="param ship-fuel">
                         <div class="change-param">
                             <div class="wrapper">
                                 <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
                               </div>
                             <span class="notion">ТОПЛИВО</span>
                         </div>
-                        <div class="visualization-param"></div>
+                        <div class="visualization-param">
+                            <div class="progress">
+                                <div class="barOverflow">
+                                  <div class="bar"></div>
+                                </div>
+                                <span>10</span>%
+                              </div>
+                        </div>
                     </div>
-                    <div class="param">
+                    <div class="param oxid">
                         <div class="change-param">
                             <div class="wrapper">
                                 <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
                               </div>
                             <span class="notion">КИСЛОРОД</span>
                         </div>
-                        <div class="visualization-param"></div>
+                        <div class="visualization-param">
+                            <div class="progress">
+                                <div class="barOverflow">
+                                  <div class="bar"></div>
+                                </div>
+                                <span>10</span>%
+                              </div>
+                        </div>
                     </div>
-                    <div class="param">
+                    <div class="param pression">
                         <div class="change-param">
                             <div class="wrapper">
                                 <input id="ctrl" class="inp" type="range" min="0" max="100" value="10">
                               </div>
                             <span class="notion">ДАВЛЕНИЕ</span>
                         </div>
-                        <div class="visualization-param"></div>
+                        <div class="visualization-param">
+                            <div class="progress">
+                                <div class="barOverflow">
+                                  <div class="bar"></div>
+                                </div>
+                                <span>10</span>%
+                              </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,10 +240,86 @@
             <div class="energy">
                 <div class="charge">
                     <span class="notion">УРОВЕНЬ ЭЛЕКТРОЗАРЯДА</span>
-                    <div class="charge-panel display"></div>
+                    <div class="charge-panel display">
+                        <div class="charge-grades">
+                            <div class="charge-grade">
+                                <span class="notion">ВЫСОКИЙ</span>
+                                <div class="grades">
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="charge-grade">
+                                <span class="notion">КОМФОРТ</span>
+                                <div class="grades">
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                </div>
+                            </div>
+                            <div class="charge-grade">
+                                <span class="notion">СРЕДНИЙ</span>
+                                <div class="grades">
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                </div>
+                            </div>
+                            <div class="charge-grade">
+                                <span class="notion">НИЗКИЙ</span>
+                                <div class="grades">
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                    <div class="grade"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="charge-percent">
+                            <div class="charge-percent-value neon">0</div>
+                            <div class="charge-percent-value neon">1</div>
+                            <div class="charge-percent-value neon">1</div>
+                            <div class="charge-percent-value neon">%</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="fuel">
                     <span class="notion">ГРАФИК РАСХОДА ТОПЛИВА И ВЫРАБОТКИ ЭНЕРГИИ</span>
+                    <div class="flasks">
+                        <div class="flasks-notion">
+                            <div class="spend-fuel notion">ВЫРАБОТКА</div>
+                            <div class="get-fuel notion">РАСХОД</div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                        <div class="flask">
+                            <div class="flask-fuel-level"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="cams">
